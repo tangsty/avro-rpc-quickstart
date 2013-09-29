@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package example;
+package com.qunar.vacation.avro.example;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -28,15 +28,15 @@ import org.apache.avro.ipc.specific.SpecificRequestor;
 import org.apache.avro.ipc.specific.SpecificResponder;
 import org.apache.avro.util.Utf8;
 
-import com.qunar.vacation.example.proto.Mail;
-import com.qunar.vacation.example.proto.Message;
+import com.qunar.vacation.avro.example.proto.Mail;
+import com.qunar.vacation.avro.example.proto.Message;
 
 /**
  * Start a server, attach a client, and send a message.
  */
 public class Main {
     public static class MailImpl implements Mail {
-        // in this simple example just return details of the message
+        // in this simple com.qunar.vacation.avro.example just return details of the message
         public Utf8 send(Message message) {
             System.out.println("Sending message");
             return new Utf8("Sending message to " + message.getTo().toString()

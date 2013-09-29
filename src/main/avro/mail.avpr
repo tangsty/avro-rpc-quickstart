@@ -1,5 +1,5 @@
 {
-    "namespace": "com.qunar.vacation.example.proto",
+    "namespace": "com.qunar.vacation.avro.example.proto",
     "protocol": "Mail",
 
     "types": [
