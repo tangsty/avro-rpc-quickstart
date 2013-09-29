@@ -21,14 +21,6 @@ package example;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 
-import org.apache.avro.ipc.SocketServer;
-import org.apache.avro.ipc.SocketTransceiver;
-import org.apache.avro.ipc.specific.SpecificRequestor;
-import org.apache.avro.ipc.specific.SpecificResponder;
-import org.apache.avro.util.Utf8;
-
-import example.proto.Mail;
-import example.proto.Message;
 import org.apache.avro.ipc.NettyServer;
 import org.apache.avro.ipc.NettyTransceiver;
 import org.apache.avro.ipc.Server;
@@ -36,8 +28,8 @@ import org.apache.avro.ipc.specific.SpecificRequestor;
 import org.apache.avro.ipc.specific.SpecificResponder;
 import org.apache.avro.util.Utf8;
 
-import java.io.IOException;
-import java.net.InetSocketAddress;
+import com.qunar.vacation.example.proto.Mail;
+import com.qunar.vacation.example.proto.Message;
 
 /**
  * Start a server, attach a client, and send a message.
@@ -73,7 +65,7 @@ public class Main {
 
         NettyTransceiver client = new NettyTransceiver(new InetSocketAddress(65111));
         // client code - attach to the server and send a message
-        Mail proxy = (Mail) SpecificRequestor.getClient(Mail.class, client);
+        Mail proxy = SpecificRequestor.getClient(Mail.class, client);
         System.out.println("Client built, got proxy");
 
         // fill in the Message record and send it

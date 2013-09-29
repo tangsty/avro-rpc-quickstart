@@ -1,2 +1,5 @@
 target
+.idea
+*.iml
+src/main/java/com/qunar/vacation/example/proto/
 src/main/java/example/proto/
