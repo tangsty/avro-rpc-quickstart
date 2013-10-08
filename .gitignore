@@ -3,3 +3,4 @@ target
 *.iml
 src/main/java/com/qunar/vacation/com.qunar.vacation.avro.example/proto/
 src/main/java/com.qunar.vacation.avro.example/proto/
+log
